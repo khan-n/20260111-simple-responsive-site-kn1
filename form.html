@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex in Action - FORM!</title>
+
+    <style>
+        /* Parent "nav" section's style starts below */
+        nav {
+            /* Using flex will make all the items of parent "nav" in single line (in-line) */
+            display: flex;
+
+            /* Indicating the "justify-content" as (space-between) makes all the items of the parent "nav" to have space in between the items.Also, separate "div"s will have two different "flex-direction" automatically. Here in this case, "div" items starts from left side and the item outside of the "div" will start from the right side!*/
+            justify-content: space-between;
+        }
+
+        /* nav (anchor) section's Style Starts below */
+        nav a {
+            /* Remove anchor's underline */
+            text-decoration: none;
+
+            /* optional anchor's text color changed */
+            color: black;
+        }
+
+        /* Style for the Main parent of "login-form" starts here */
+        .login-form-container {
+
+            /* Using border for this parent to understand clearly. */
+            border: 2px solid green;
+
+            /* Making the parent section "flex" using "display" (flex)*/
+            display: flex;
+
+            /* to make the contents of the parent section to be on the middle of the page using "justify-content" (center). */
+            justify-content: center;
+        }
+
+        /* Parent (form) section's class "login-form" Style below*/
+        .login-form {
+            /* Making the parent section "flex" using "display" (flex)*/
+            display: flex;
+
+            /* Indicating the "flex-direction" using (column) to make the items inside the parent to show in a column.*/
+            flex-direction: column;
+
+            /* Indicating the width of the parent class "login-form" to acquire space as required using (width: --%). */
+            width: 50%;
+
+            /* Using border for this parent to understand clearly. */
+            border: 2px solid red;
+
+            /* Trying to make the contents of the parent section to be on the middle of the page using "justify-content" (center). 
+            Note that this won't change anything! What to do the??? We create a separate Section/Parent with a class "login-container" for this "login-form" parent!*/
+            justify-content: center;
+        }
+
+        /* To give some space between all the "input" type items of the parent class "login-form" using (margin-top). */
+        .login-form input {
+            margin-top: 10px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- Example Anchor Items "a" starts in this parent "div" -->
+    <nav>
+        <!-- Creating a separate "div" to keep the items on one side and the items outside of this "div" to somewhere else.-->
+        <div>
+            <a href="">Home</a>
+            <a href="">Profile</a>
+            <a href="">Blog</a>
+            <a href="">About</a>
+        </div>
+
+        <a href="">Login</a>
+    </nav>
+
+    <section class="login-form-container">
+        <!-- Creating a simple Form Parent Section. Used a "class" for the parent (login-form) to make the whole section "flex" by using style section of the page. -->
+        <form class="login-form">
+
+            <h3>Please Login</h3>
+            <!-- Input type Email(email input box only with no title or id). Note that this input is indicated as REQUIRED by using (required) at the end.-->
+            <input type="email" name="" id="" placeholder="Your Email" required>
+
+            <!-- Input type Password (password input box only with no title or id). Note that this input is indicated as REQUIRED by using (required) at the end.. -->
+            <input type="password" name="" id="" placeholder="Password" required>
+
+            <!-- Input type Submit with Value/Text (Login) Shown on the Submit Button.-->
+            <input type="submit" value="Login">
+
+        </form>
+    </section>
+
+</body>
+
+</html>
