@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox HTML - P2</title>
+
+    <style>
+        /* Style of the CONTAINER of the BOXes */
+        .container {
+            border: 2px solid red;
+            /* To display the BOXES in a line - using (display:flex) in container. Note that */
+            display: flex;
+
+            /* By default the "justify-content" starts from the LEFT (flex-start) side of the container area/border. To change that, we can indicate the changes as needed. Note that (justify-content) works horizontally! (example: flex-end | center | space-between | space-around)*/
+            justify-content: space-around;
+
+            /* Container Height is given below */
+            height: 300px;
+
+            /* To make the "justified contents/items - here in BOXES" to align vertically, we need to use (align-items) to indicate the changes as needed. Vertically the START of the (align-items) is the top of the CONTAINER, END is the bottom. (example: flex-end |center)*/
+            align-items: center;
+        }
+
+        /* Style of the BOXES inside the "container" */
+        .box1 {
+            border: 2px dashed gray;
+            width: 100px;
+            height: 100px;
+        }
+
+        /* Flexbox Layout - Part 2 Starts here with container2 */
+
+        .container2 {
+            border: 2px solid green;
+            /* To display the BOXES in a line - using (display:flex) in container.*/
+            display: flex;
+
+            /* (flex-direction) in default is unidirectional! To indicate the changes we can use (column | column reverse | row-reverse). Note that using "reverse" makes the order of the items to become reversed (123 will become 321).*/
+            flex-direction: column-reverse;
+
+            /* Container Height is given below */
+            height: 500px;
+
+            /* Used justify-content and align-items (shown in part 1) to make it more understandable!*/
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        /* Style of the BOXES inside the "container2" */
+        .box2 {
+            border: 2px dashed blueviolet;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Flexbox Layout - Part 1</h1>
+    <div class="container">
+        <div class="box1">Box1-1</div>
+        <div class="box1">Box1-2</div>
+        <div class="box1">Box1-3</div>
+    </div>
+
+    <!-- Space between 2 containers using <br> -->
+    <br><br><br>
+
+    <h1>Flexbox Layout - Part 2</h1>
+
+    <p>
+        To display the BOXES in a line - using (display:flex) in container. <br>Note that the (flex-direction) in default is unidirectional! To indicate the changes we can use (column | column reverse | row-reverse). <br>Notice that using "reverse" makes the order of the items to become reversed (123 will become 321).
+    </p>
+
+    <div class="container2">
+        <div class="box2">Box2-1</div>
+        <div class="box2">Box2-2</div>
+        <div class="box2">Box2-3</div>
+    </div>
+
+
+    <br><br><br>
+
+    <h1>Flexbox Layout - Part 3</h1>
+    <div>
+        <div class="box3">Box3-1</div>
+        <div class="box3">Box3-2</div>
+        <div class="box3">Box3-3</div>
+        <div class="box3">Box3-4</div>
+        <div class="box3">Box3-5</div>
+        <div class="box3">Box3-6</div>
+        <div class="box3">Box3-7</div>
+        <div class="box3">Box3-8</div>
+        <div class="box3">Box3-9</div>
+        <div class="box3">Box3-10</div>
+    </div>
+
+</body>
+
+</html>
