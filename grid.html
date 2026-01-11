@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout in Action</title>
+
+    <!-- Style Section starts here -->
+    <style>
+        /* Parent class "container1" style starts here */
+        .container1 {
+            /* only indicating "display" using (grid) won't make any visual changes.*/
+            display: grid;
+
+            /* Setting a "grid-template-columns" indicating the column size will show the grid with indicated column size in "px".
+            
+            Note that to create multiple columns, we need to put multiple size indicators giving SPACE after/in between. as example to create 3 columns of 100px size, we will have to give "100px 100px 100px; " */
+            grid-template-columns: 100px 100px 100px;
+        }
+
+        /* Creating a common style for all the children/items of the parent "container1"*/
+        .item {
+            border: 1px solid cyan;
+        }
+
+        /* Parent class "container2" style starts here */
+        .container2 {
+            /* only indicating "display" using (grid) won't make any visual changes.*/
+            display: grid;
+
+            /* Another way we can indicate it in a short way by using (repeat). Note that to use repeat, we have to provide the (QTY of repetition, size) as example (3, 100); Notice that the example below we are showing 3 columns with size 200px | one 100px | 300px in one single line!*/
+            grid-template-columns: repeat(3, 200px) 100px 300px;
+        }
+
+        /* Creating a common style for all the children/items of the parent "container2"*/
+        .item2 {
+            border: 1px solid lightgreen;
+        }
+
+        /* Parent class "container3" style starts here */
+        .container3 {
+            /* only indicating "display" using (grid) won't make any visual changes.*/
+            display: grid;
+
+            /* Let's say we need 3 repeated columns those will divide column size evenly (of the viewport/browser window)! We can do so by using the following: repeat(3, 1fr); */
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        /* Creating a common style for all the children/items of the parent "container3"*/
+        .item3 {
+            border: 1px solid lightcoral;
+        }
+
+        /* Style for all images */
+        img {
+            width: 900px;
+            height: 600px;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Parent Class "container1" -->
+    <h1>Exploring GRID LAYOUT (Bi-directional)</h1>
+
+    <!-- Creating a Parent class "container1" with children items inside the parent "container" -->
+
+    <h3>
+        1. To create multiple columns, we need to put multiple size indicators giving SPACE after/in between. <br>As
+        example to
+        create 3 columns of 100px size, we will have to give "100px 100px 100px" in style section.;
+    </h3>
+
+    <div class="container1">
+        <div class="item">item - 1</div>
+        <div class="item">item - 2</div>
+        <div class="item">item - 3</div>
+        <div class="item">item - 4</div>
+        <div class="item">item - 5</div>
+        <div class="item">item - 6</div>
+        <div class="item">item - 7</div>
+        <div class="item">item - 8</div>
+        <div class="item">item - 9</div>
+        <div class="item">item - 10</div>
+        <div class="item">item - 11</div>
+        <div class="item">item - 12</div>
+        <div class="item">item - 13</div>
+        <div class="item">item - 14</div>
+        <div class="item">item - 15</div>
+        <div class="item">item - 16</div>
+        <div class="item">item - 17</div>
+        <div class="item">item - 18</div>
+        <div class="item">item - 19</div>
+        <div class="item">item - 20</div>
+    </div><br><br>
+
+    <!-- Parent Class "container2" -->
+    <h3>
+        2. Another way we can indicate it in a short way by using (repeat). Note that to use repeat, we have to provide
+        the
+        (QTY of repetition, size) as example (3, 100); <br>Notice that the example below we are showing 3 columns with
+        size 200px | one 100px | 300px in one single line in style section.!
+    </h3>
+
+    <!-- Creating a Parent class "container" with children items inside the parent "container" -->
+
+    <div class="container2">
+        <div class="item2">item - 1</div>
+        <div class="item2">item - 2</div>
+        <div class="item2">item - 3</div>
+        <div class="item2">item - 4</div>
+        <div class="item2">item - 5</div>
+        <div class="item2">item - 6</div>
+        <div class="item2">item - 7</div>
+        <div class="item2">item - 8</div>
+        <div class="item2">item - 9</div>
+        <div class="item2">item - 10</div>
+        <div class="item2">item - 11</div>
+        <div class="item2">item - 12</div>
+        <div class="item2">item - 13</div>
+        <div class="item2">item - 14</div>
+        <div class="item2">item - 15</div>
+        <div class="item2">item - 16</div>
+        <div class="item2">item - 17</div>
+        <div class="item2">item - 18</div>
+        <div class="item2">item - 19</div>
+        <div class="item2">item - 20</div>
+    </div><br><br>
+
+
+    <!-- Parent Class "container3" -->
+    <h3>
+        3. Let's say we need 3 repeated columns those will divide column size evenly (of the viewport/browser window)!
+        <br>We can do so by using the following: repeat(3, 1fr); in one single line in style section.!
+    </h3>
+
+    <!-- Creating a Parent class "container" with children items inside the parent "container" -->
+
+    <div class="container3">
+        <div class="item3">item - 1</div>
+        <div class="item3">item - 2</div>
+        <div class="item3">item - 3</div>
+        <div class="item3">item - 4</div>
+        <div class="item3">item - 5</div>
+        <div class="item3">item - 6</div>
+        <div class="item3">item - 7</div>
+        <div class="item3">item - 8</div>
+        <div class="item3">item - 9</div>
+        <div class="item3">item - 10</div>
+        <div class="item3">item - 11</div>
+        <div class="item3">item - 12</div>
+        <div class="item3">item - 13</div>
+        <div class="item3">item - 14</div>
+        <div class="item3">item - 15</div>
+        <div class="item3">item - 16</div>
+        <div class="item3">item - 17</div>
+        <div class="item3">item - 18</div>
+        <div class="item3">item - 19</div>
+        <div class="item3">item - 20</div>
+    </div>
+
+    <br><br><br>
+
+    <Summary>
+        <img src="assets/Grid Architecture.PNG" alt="Grid Architecture">
+        <img src="assets/justify-content-X-axis.png" alt="Justify Content X-Axis">
+        <br><br>
+        <img src="assets/Align-Content-Y-Axis.PNG" alt="Align Content Y-Axis">
+        <img src="assets/Grid Properties-1.PNG" alt="Grid Parent & Children">
+    </Summary>
+
+</body>
+
+</html>
