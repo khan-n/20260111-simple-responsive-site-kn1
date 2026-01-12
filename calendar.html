@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+
+    <style>
+        /* -- Style for the Parent Class "calendar" starts here-- */
+        .calendar {
+            /* Assigning children to show as GRID.. */
+            display: grid;
+
+            /* Grid's template column indicating with (repeat: (7, 1fr); ). This way all the children will have same fraction/space/column size! */
+            grid-template-columns: repeat(7, 1fr);
+
+            /* grid-template-rows: 30px repeat(5, 50px); */
+
+            /* adding row-gap to separate the rows...*/
+            row-gap: 20px;
+
+            /* adding column-gap to separate the columns... */
+            column-gap: 20px;
+        }
+
+        /* Adding some styles to the items/contents/children below. NOTE: (.day) has been added after (.date) using a "," coma to assign same properties for the (.day) too. CSS is cascading, whichever code comes later gets applied!  */
+        .date,
+        .day {
+            /* Background color added */
+            background-color: aqua;
+
+            /* adding some radius to the items/contents/children to look rounded!! */
+            border-radius: 5px;
+
+            /* Indicating Height of the items/children/content. 
+            NOTE: We could've used "grid-template-row" inside Parent Style to indicate the height too. See above and under "gird-template-column" !*/
+            height: 50px;
+
+            /* Trying to flex the items/contents/children to look better! (By default adding "display: flex" wont show any visible changes) */
+            display: flex;
+
+            /* Making all the items/contents to be centered horizontally using "justify-content" */
+            justify-content: center;
+
+            /* Making all the items/contents to be centered vertically/in column using "align-items" */
+            align-items: center;
+
+            /* Changing the font size using "em" Unit (NOT <em> element tag), to make it look bigger!
+            Note: The "em unit" is a scalable, relative unit of measurement commonly used in CSS for defining sizes, such as font size, margins, and padding. 
+
+            Relative to Parent: One em is equal to the current font size of the parent element.
+
+            Scalability: This makes designs responsive and accessible, as elements scale proportionally based on their context or user font size preferences.
+            
+            Example:
+            If a parent element has a font size of 16px, then 1em for a child element would equal 16px, and 2em would equal 32px.*/
+            font-size: 1.5em;
+        }
+
+        /* (.day) has been added after (.date) above using a "," coma to assign same properties for the (.day) too. CSS is cascading, whichever code comes later gets applied! 
+        
+        Here in this case, "background-color" and "font-size" came later as latest, thus took precedence over the previous input! */
+        .day {
+            background-color: chocolate;
+            font-size: 1em;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    
+    <h1>Two Dimensional (Slightly-Responsive) Calendar!</h1>
+
+    <!-- Creating Parent Class "calendar" -->
+    <div class="calendar">
+
+        <!-- Please check carefully to the STEPS numbered below!!! -->
+
+        <!-- 4) Adding name of the days of the week below: -->
+        <div class="day">Sun</div>
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thu</div>
+        <div class="day">Fri</div>
+        <div class="day">Sat</div>
+
+
+        <!-- 3) Added the previously cut 3 dates below with changed date to show the last 3 dates of previous 31 days month (29, 30 & 31) below: -->
+        <div class="date">29</div>
+        <div class="date">30</div>
+        <div class="date">31</div>
+
+        <!-- 1) creating children/items for DATE ( .date{$}*35 ). Later we will cut 3 of them from below and will add on the top. 
+        2) And changing the last two dates as 1 & 2 (considering 30 days in this month)-->
+        <div class="date">1</div>
+        <div class="date">2</div>
+        <div class="date">3</div>
+        <div class="date">4</div>
+        <div class="date">5</div>
+        <div class="date">6</div>
+        <div class="date">7</div>
+        <div class="date">8</div>
+        <div class="date">9</div>
+        <div class="date">10</div>
+        <div class="date">11</div>
+        <div class="date">12</div>
+        <div class="date">13</div>
+        <div class="date">14</div>
+        <div class="date">15</div>
+        <div class="date">16</div>
+        <div class="date">17</div>
+        <div class="date">18</div>
+        <div class="date">19</div>
+        <div class="date">20</div>
+        <div class="date">21</div>
+        <div class="date">22</div>
+        <div class="date">23</div>
+        <div class="date">24</div>
+        <div class="date">25</div>
+        <div class="date">26</div>
+        <div class="date">27</div>
+        <div class="date">28</div>
+        <div class="date">29</div>
+        <div class="date">30</div>
+        <div class="date">1</div>
+        <div class="date">2</div>
+    </div>
+
+</body>
+
+</html>
