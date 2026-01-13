@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+}
+
+.table-container {
+    overflow-x: auto; /* Ensures responsiveness by allowing horizontal scroll on small screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Merges borders into a single, clean line */
+    margin: 10px auto;
+    background-color: #fff;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+caption {
+    padding: 1em;
+    font-style: italic;
+    caption-side: top;
+    text-align: left;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word; /* Prevents long words from breaking the layout */
+}
+
+thead th {
+    background-color: #007bff; /* Header background color */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Adds zebra-striping for readability */
+}
+
+tbody tr:hover {
+    background-color: #ddd; /* Highlights rows on hover for better user experience */
+}
+
+/* Optional: Adjust width for the first column (Factor) to give it more prominence */
+tbody td:first-child {
+    font-weight: bold;
+    width: 25%;
+}
