@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query P2</title>
+
+    <style>
+        /*  Parent class "container" Style Starts..*/
+        .container {
+            /* First step to make it Responsive using "display: flex" but that wont be useful! */
+            /* display: flex; */
+
+            /* Going to try "display: grid" will not show any changes but it is promising!!*/
+            display: grid;
+
+            /* Lets indicate the QTY of images to be shown in viewport/window using "grid-template-columns: repeat (3, 1fr);" */
+            grid-template-columns: repeat(3, 1fr);
+
+            /* Giving some gap to look better! */
+            gap: 20px;
+        }
+
+        /* Children/Item/Content Class "food" Style Starts --> */
+        .food {
+            /* border assigned */
+            border: 2px solid red;
+
+            /* Using some padding inside the Items to look better and have a bit space around the images and texts! */
+            padding: 10px;
+
+            /* Also having some curved border line for the Items/Children, using "border-radius" now!*/
+            border-radius: 10px;
+        }
+
+        /* To make the larger images to be shown inside the viewport correctly, we can use children's item class "food" by indicating our desired value for the "width"... Here in this case to make it responsive for the viewport/window size.
+
+        So, no matter how large the images are, will be forced to be displayed inside the viewport/window according to the Parent "container" values by using (width: 100%) */
+        .food img {
+            width: 100%;
+        }
+
+        /* *******SMALLER DEVICES ONLY******* */
+
+        /* To prevent breaking up in smaller devices, (Bootstrap) has a way to specify the "BREAKPOINT" size! 
+        To indicate: @media screen and (max-width). 
+        And inside of it, we indicate the Parent "container" to show 1 image in smaller Viewport/window as shown below:  */
+        @media screen and (max-width: 576px) {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            /* Adding Background color when used in SMALL DEVICEs */
+            .food {
+                background-color: black;
+
+                /* Adding Text Color when used in SMALL DEVICEs */
+                color: lightgreen;
+            }
+        }
+
+        /* *******MEDIUM DEVICES***** */
+
+        /* Screen size indicated when the viewport/window size has to be Minimum 577px and Maximum 992px */
+        @media screen and (min-width: 577px) and (max-width: 992px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <h1>Media Query P2 (Medium Decices) Module 7-7</h1>
+
+    <!-- Creating Parent "container" with 12 children with images (.container>.food*12>img[src="images/scorn-kn.jpg"]+h3{Food Item - $}+p{Price: \$$00}+p>lorem20^btn{Buy Now} ) - this will add the buy button! -->
+
+    <div class="container">
+        <div class="food">
+            <img src="images/scorn-kn.jpg" alt="">
+            <h3>Food Item - 1</h3>
+            <p>Price: $100</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit minus beatae amet explicabo dicta commodi!
+                Ratione dicta sint excepturi dolorum.</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="food">
+            <img src="images/khan-n.png" alt="">
+            <h3>Food Item - 2</h3>
+            <p>Price: $200</p>
+            <p>Corrupti nihil vitae harum, voluptatibus consequuntur vero tempore beatae sunt aperiam accusamus saepe
+                omnis id quibusdam necessitatibus amet ea totam.</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="food">
+            <img src="images/cod-kn.png" alt="">
+            <h3>Food Item - 3</h3>
+            <p>Price: $300</p>
+            <p>Modi perspiciatis asperiores veniam cupiditate distinctio, ex magnam libero blanditiis quis dignissimos
+                consequuntur necessitatibus tenetur ducimus explicabo quasi? Doloribus, delectus.</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="food">
+            <img src="images/scorn-kn.jpg" alt="">
+            <h3>Food Item - 4</h3>
+            <p>Price: $400</p>
+            <p>Laborum aperiam expedita facere recusandae pariatur qui corporis esse libero? Sint error vitae aliquam
+                iure maiores. Officiis magni ex quaerat.</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="food">
+            <img src="images/khan-n.png" alt="">
+            <h3>Food Item - 5</h3>
+            <p>Price: $500</p>
+            <p>Deserunt architecto fuga maxime fugiat, rem quam neque laborum illum veritatis voluptate mollitia
+                eligendi provident ab vero maiores in? Nihil!</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="food">
+            <img src="images/cod-kn.png" alt="">
+            <h3>Food Item - 6</h3>
+            <p>Price: $600</p>
+            <p>Quo dolores nulla maxime sed? Eaque veritatis ullam perspiciatis placeat modi molestiae deleniti, sed
+                corrupti labore veniam aliquam, id animi.</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="food">
+            <img src="images/scorn-kn.jpg" alt="">
+            <h3>Food Item - 7</h3>
+            <p>Price: $700</p>
+            <p>Totam consectetur facere, molestiae asperiores quod aspernatur, a corrupti earum, voluptas laborum
+                nesciunt nulla recusandae vero iste eveniet quos tempore!</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="food">
+            <img src="images/scorn-kn.jpg" alt="">
+            <h3>Food Item - 8</h3>
+            <p>Price: $800</p>
+            <p>Impedit maxime repellat fuga minima nemo ratione, nostrum possimus hic esse facilis laboriosam, ipsa
+                architecto sint culpa optio veritatis nulla.</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="food">
+            <img src="images/scorn-kn.jpg" alt="">
+            <h3>Food Item - 9</h3>
+            <p>Price: $900</p>
+            <p>Quia odio quaerat ducimus officiis necessitatibus in quam eligendi nemo quisquam. Magnam repudiandae
+                explicabo suscipit animi cumque saepe natus placeat.</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="food">
+            <img src="images/scorn-kn.jpg" alt="">
+            <h3>Food Item - 10</h3>
+            <p>Price: $1000</p>
+            <p>Possimus exercitationem inventore nulla repudiandae in maiores minima! Repellat iure perspiciatis commodi
+                laborum sed numquam ipsam culpa maxime sunt est.</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="food">
+            <img src="images/scorn-kn.jpg" alt="">
+            <h3>Food Item - 11</h3>
+            <p>Price: $1100</p>
+            <p>Qui nobis dolor quaerat aut vitae nesciunt similique pariatur neque quasi debitis accusamus officiis
+                repellat, at repudiandae, obcaecati possimus. Possimus!</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="food">
+            <img src="images/scorn-kn.jpg" alt="">
+            <h3>Food Item - 12</h3>
+            <p>Price: $1200</p>
+            <p>Aliquid, sunt neque dolores voluptatem repellendus ipsa iure voluptates quaerat eaque debitis similique
+                delectus! Illo, unde? Cum aspernatur doloribus ut.</p>
+            <button>Buy Now</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
